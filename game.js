@@ -17,7 +17,7 @@ while (guess != randomNumber){
         attempts = attempts + 1
     }
     else if (guess < randomNumber){
-        guess = window.prompt('This number is to low, try again')
+        guess = window.prompt('This number is too low, try again')
         attempts = attempts + 1
     }
     else{
