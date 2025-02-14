@@ -1,6 +1,6 @@
 let randomNumber = Math.floor(Math.random() * 10) + 1;
 let attempts = 1;
-let guess = window.prompt('Enter a guess for the number between 1 and 999')
+let guess = window.prompt('Enter a guess for the number between 1 and 10')
 guess = Number(guess)
 
 
@@ -21,7 +21,7 @@ while (guess != randomNumber){
         attempts = attempts + 1
     }
     else{
-        window.alert(`You got out the loop with with ${attempts} attempts`)
         break
     } 
 }
+window.alert(`You got out the loop with with ${attempts} attempts`)
