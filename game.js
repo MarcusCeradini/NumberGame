@@ -5,7 +5,14 @@ guess = Number(guess)
 
 
 while (guess != randomNumber || guess != 999){
-    if (guess > randomNumber){
+    if (isNaN(guess)){
+        guess = window.prompt('Enter a valid number')
+    }
+    else if(guess == 999){
+        window.alert(`You entered 999 breaking out of the game`)
+        break
+    }
+    else if (guess > randomNumber){
         guess = window.prompt('This number is to high, try again')
         attempts = attempts + 1
     }
@@ -14,10 +21,10 @@ while (guess != randomNumber || guess != 999){
         attempts = attempts + 1
     }
     else{
+        window.alert(`You got out the loop with with ${attempts} attempts`)
         break
     } 
 }
-window.alert(`You got out the loop with with ${attempts} attempts`)
 // Prompt user for a number between 1 and 10, or type 999 to exit.
 
 // Create while loop that continues for as long as the user guesses are incorrect.
